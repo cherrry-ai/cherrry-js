@@ -13,7 +13,7 @@ Install the package from npm with your favorite package manager
 
 ### API Keys
 
-From cherrry.com/dashboard/api to get your API Keys
+From https://cherrry.com/dashboard/api to get your API Keys
 
 #### Private Key
 
