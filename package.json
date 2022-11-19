@@ -11,10 +11,22 @@
         "url": "git+https://github.com/cherrry-ai/cherrry-js.git"
     },
     "author": "lukas@cherrry.com",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/cherrry-ai/cherrry-js/issues"
     },
+    "keywords": [
+        "cherrry",
+        "cherry",
+        "search",
+        "api",
+        "ai",
+        "ml",
+        "neural",
+        "semantic",
+        "vector",
+        "engine"
+    ],
     "homepage": "https://github.com/cherrry-ai/cherrry-js#readme",
     "dependencies": {
         "axios": "^1.1.3"
