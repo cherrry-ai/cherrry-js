@@ -1,10 +1,11 @@
 const CherrryClient = require("./index");
-const token = "your token";
-const client = new CherrryClient(token);
+const private_key = "your private api key goes here so you can read+write";
+const client = new CherrryClient(private_key);
 
 const createTableTest = async () => {
     var { success, error } = await client.create_table("blogs");
-    console.log("create table error::", success, error);
+    console.log("create table error::", success);
+    console.log("error::", error);
 };
 
 const insertTest = async () => {
@@ -26,26 +27,29 @@ const insertTest = async () => {
         }
     });
 
-    console.log("insert::", data, error);
+    console.log("insert::", data);
+    console.log("error::", error);
 };
 
 const searchTest = async () => {
     var { data, error } = await client
         .from("blogs")
-        .search({ prompt: "pirates", size: 1, search_type: "image" });
+        .search({ prompt: "pie", size: 3, search_type: "image" });
 
-    console.log("search::", data, error);
-    console.log(data[0]["row_data"]["row_data"]["texts"]);
+    console.log("search::", data);
+    console.log("error::", error);
 };
 
 const docTest = async () => {
     var { data, error } = await client.from("blogs").doc("6423958");
-    console.log("doc::", data, error);
+    console.log("doc::", data);
+    console.log("error::", error);
 };
 
 const deleteTest = async () => {
     var { success, error } = await client.from("blogs").delete("6423958");
-    console.log("delete::", success, error);
+    console.log("delete::", success);
+    console.log("error::", error);
 };
 
 const run = async () => {

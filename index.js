@@ -1,5 +1,5 @@
 const axios = require("axios");
-const url = "https://api.cherrry.com/v1";
+const url = "http://api.cherrry.com";
 
 class CherrryClient {
     constructor(api_key) {
@@ -27,7 +27,7 @@ class CherrryClient {
                     "Content-Type": "application/json"
                 }
             });
-            data = true;
+            success = true;
         } catch (err) {
             error = err?.response?.data || err;
         }
