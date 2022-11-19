@@ -17,11 +17,15 @@ From https://cherrry.com/dashboard/api to get your API Keys
 
 #### Private Key
 
-This is your private key, **keep it secret and never use it client-side**. It has service role privilages: it can read + write data.
+Private keys start with `ch_prv`
+
+**keep it secret and never use it client-side**. It has service role privilages: it can read + write data.
 
 #### Public Key
 
-This is your public key.
+Public keys start with `ch_pub`
+
+They're intended to be use client-side and have read-only privilages.
 
 ### Initalize
 
