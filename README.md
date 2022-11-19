@@ -9,7 +9,9 @@
 ### npm package
 
 Install the package from npm with your favorite package manager
-`npm install @cherrry-ai/cherrry-js`
+```
+npm install @cherrry-ai/cherrry-js
+```
 
 ### API Keys
 
