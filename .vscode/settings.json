@@ -1,0 +1,25 @@
+{
+    "editor.tabSize": 4,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.formatOnSave": true,
+    "javascript.suggest.autoImports": false,
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

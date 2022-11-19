@@ -1,0 +1,22 @@
+{
+  "name": "cherrry-js",
+  "version": "1.0.0",
+  "description": "Isomorphic Javascript SDK for Cherrry",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cherrry-ai/cherrry-js.git"
+  },
+  "author": "lukas@cherrry.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cherrry-ai/cherrry-js/issues"
+  },
+  "homepage": "https://github.com/cherrry-ai/cherrry-js#readme",
+  "dependencies": {
+    "axios": "^1.1.3"
+  }
+}

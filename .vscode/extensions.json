@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "oderwat.indent-rainbow",
+        "eamodio.gitlens",
+    ],
+    "unwantedRecommendations": []
+}
