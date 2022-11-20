@@ -1,5 +1,5 @@
 const CherrryClient = require("./index");
-const private_key = "your private api key goes here so you can read+write";
+const private_key = "your private api key";
 const client = new CherrryClient(private_key);
 
 const createTableTest = async () => {
@@ -34,7 +34,7 @@ const insertTest = async () => {
 const searchTest = async () => {
     var { data, error } = await client
         .from("blogs")
-        .search({ prompt: "pie", size: 3, search_type: "image" });
+        .search({ prompt: "desert pie", size: 3, search_type: "text" });
 
     console.log("search::", data);
     console.log("error::", error);
