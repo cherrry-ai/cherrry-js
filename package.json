@@ -1,6 +1,6 @@
 {
     "name": "@cherrry-ai/cherrry-js",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Isomorphic Javascript SDK for Cherrry",
     "main": "index.js",
     "scripts": {

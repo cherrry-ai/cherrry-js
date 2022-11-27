@@ -1,4 +1,3 @@
-const axios = require("axios");
 const url = "http://api.cherrry.com";
 
 class CherrryClient {
@@ -16,16 +15,13 @@ class CherrryClient {
         var success = false,
             error;
         try {
-            const res = await axios({
+            const params = {
+                api_key: this.api_key,
+                name: name
+            };
+            const res = await fetch(url + "/create_table", {
                 method: "put",
-                url: url + "/create_table",
-                data: {
-                    api_key: this.api_key,
-                    name: name
-                },
-                headers: {
-                    "Content-Type": "application/json"
-                }
+                body: JSON.stringify(params)
             });
             success = true;
         } catch (err) {
