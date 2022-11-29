@@ -1,4 +1,5 @@
 const url = "http://api.cherrry.com";
+const axios = require("axios");
 
 class CherrryClient {
     constructor(api_key) {
@@ -15,17 +16,23 @@ class CherrryClient {
         var success = false,
             error;
         try {
-            const params = {
-                api_key: this.api_key,
-                name: name
-            };
-            const res = await fetch(url + "/create_table", {
+            const res = await axios({
                 method: "put",
-                body: JSON.stringify(params)
+                url: url + "/create_table",
+                data: {
+                    api_key: this.api_key,
+                    name: name
+                },
+                headers: {
+                    "Content-Type": "application/json"
+                }
             });
+
+            if (res.status != 200)
+                throw new Error("Error creating table server responded with", res);
             success = true;
         } catch (err) {
-            error = err?.response?.data || err;
+            error = err;
         }
 
         return { success: success, error: error };
@@ -53,9 +60,11 @@ class CherrryClient {
                     "Content-Type": "application/json"
                 }
             });
+            if (res.status != 200)
+                throw new Error("Error inserting doc server responded with", res);
             data = res.data;
         } catch (err) {
-            error = err?.response?.data || err;
+            error = err;
         }
         return { data: data, error: error };
     };
@@ -83,9 +92,12 @@ class CherrryClient {
                     "Content-Type": "application/json"
                 }
             });
+
+            if (res.status != 200)
+                throw new Error("Error creating table server responded with", res);
             data = res.data.result;
         } catch (err) {
-            err?.response?.data || err;
+            error = err;
         }
         return { data: data, error: error };
     };
@@ -107,9 +119,11 @@ class CherrryClient {
                     "Content-Type": "application/json"
                 }
             });
+
+            if (res.status != 200) throw new Error("Error getting doc server responded with", res);
             data = res.data;
         } catch (err) {
-            error = err?.response?.data || err;
+            error = err;
         }
 
         return { data: data, error: error };
@@ -133,9 +147,10 @@ class CherrryClient {
                     "Content-Type": "application/json"
                 }
             });
+            if (res.status != 200) throw new Error("Error deleting doc server responded with", res);
             success = true;
         } catch (err) {
-            error = err?.response?.data || err;
+            error = err;
         }
 
         return { success: success, error: error };
