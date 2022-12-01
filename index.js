@@ -1,4 +1,4 @@
-const url = "http://api.cherrry.com";
+const url = "https://api.cherrry.com";
 const axios = require("axios");
 
 class CherrryClient {
@@ -17,12 +17,12 @@ class CherrryClient {
             error;
         try {
             const res = await axios({
-                method: "put",
+                method: "post",
                 url: url + "/create_table",
-                data: {
+                data: JSON.stringify({
                     api_key: this.api_key,
                     name: name
-                },
+                }),
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -49,7 +49,7 @@ class CherrryClient {
         var data, error;
         try {
             const res = await axios({
-                method: "put",
+                method: "post",
                 url: url + "/insert",
                 data: {
                     api_key: this.api_key,
@@ -79,7 +79,7 @@ class CherrryClient {
         var data, error;
         try {
             const res = await axios({
-                method: "get",
+                method: "post",
                 url: url + "/search",
                 data: {
                     api_key: this.api_key,
@@ -108,7 +108,7 @@ class CherrryClient {
         var data, error;
         try {
             const res = await axios({
-                method: "get",
+                method: "post",
                 url: url + "/doc",
                 data: {
                     api_key: this.api_key,
@@ -136,7 +136,7 @@ class CherrryClient {
             error;
         try {
             const res = await axios({
-                method: "delete",
+                method: "post",
                 url: url + "/delete",
                 data: {
                     api_key: this.api_key,
