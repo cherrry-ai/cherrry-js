@@ -11,7 +11,7 @@
 
 Install the package from npm with your favorite package manager
 
-```
+```js
 npm install @cherrry-ai/cherrry-js
 ```
 
@@ -33,19 +33,19 @@ They're intended to be use client-side and have read-only privilages.
 
 ### Initalize
 
-```
+```js
 const CherrryClient = require("@cherrry-ai/cherrry-js")
 ```
 
 or
 
-```
+```js
 import CherrryClient from "@cherrry-ai/cherrry-js"
 ```
 
 initialize the client
 
-```
+```js
 const client = new CherrryClient(api_key)
 ```
 
