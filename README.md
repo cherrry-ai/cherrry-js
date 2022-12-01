@@ -2,7 +2,7 @@
 
 ## Cherrry Javascript SDK
 
-![Banner (1)](https://user-images.githubusercontent.com/42971022/204960356-9c52df84-d183-409c-b360-f0fedbc3ab7b.jpg)
+<img width="644" alt="CleanShot 2022-11-30 at 21 40 41@2x" src="https://user-images.githubusercontent.com/42971022/204960579-371f96b7-1281-4c7a-b95a-81e4c3139020.png">
 
 
 ## Installation + API keys
