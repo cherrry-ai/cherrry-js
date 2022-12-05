@@ -4,6 +4,7 @@
 
 <img width="644" alt="CleanShot 2022-11-30 at 21 40 41@2x" src="https://user-images.githubusercontent.com/42971022/204960579-371f96b7-1281-4c7a-b95a-81e4c3139020.png">
 
+[App](https://cherrry.com/dashboard) | [Docs](https://cherrry.com/docs) | [Blog](https://cherrry.com/blog)
 
 ## Installation + API keys
 
@@ -34,19 +35,19 @@ They're intended to be use client-side and have read-only privilages.
 ### Initalize
 
 ```js
-const CherrryClient = require("@cherrry-ai/cherrry-js")
+const CherrryClient = require("@cherrry-ai/cherrry-js");
 ```
 
 or
 
 ```js
-import CherrryClient from "@cherrry-ai/cherrry-js"
+import CherrryClient from "@cherrry-ai/cherrry-js";
 ```
 
 initialize the client
 
 ```js
-const client = new CherrryClient(api_key)
+const client = new CherrryClient(api_key);
 ```
 
 ## Concepts
